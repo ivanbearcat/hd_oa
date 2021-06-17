@@ -26,8 +26,7 @@
 						</li>
 					</ul>
 				</li>
-<!--                {% if request.session.assets_can_view %}-->
-                <li id="assets">
+                <li id="asset">
 					<a href="javascript:;">
 						<i class="fa fa-truck"></i>
 						<span class="title">
@@ -37,10 +36,10 @@
 						</span>
 					</a>
 					<ul class="sub-menu">
-                        <li id="assets_table">
-							<a href="/assets/table/">
+                        <li id="asset_table">
+							<a href="/asset/table/">
 								<i class="fa"></i>
-								航动资产表
+								资产表
 							</a>
 						</li>
 <!--                        <li id="assets_log">-->
@@ -49,67 +48,6 @@
 <!--								资产流动记录-->
 <!--							</a>-->
 <!--						</li>-->
-					</ul>
-				</li>
-                {% endif %}
-                <li id="KPI">
-					<a href="javascript:;">
-						<i class="fa fa-calendar"></i>
-						<span class="title">
-							绩效管理
-						</span>
-						<span class="arrow ">
-						</span>
-					</a>
-					<ul class="sub-menu">
-                        <li id="KPI_table">
-							<a href="/KPI_table/">
-								<i class="fa"></i>
-								绩效考评
-							</a>
-						</li>
-                        <li id="KPI_table_approve">
-							<a href="/KPI_table_approve/">
-								<i class="fa"></i>
-								绩效待审批
-							</a>
-						</li>
-                        <li id="KPI_table_all">
-							<a href="/KPI_table_all/">
-								<i class="fa"></i>
-								全部绩效
-							</a>
-						</li>
-					</ul>
-				</li>
-                <li id="seal">
-					<a href="javascript:;">
-						<i class="fa fa-archive"></i>
-						<span class="title">
-							印章管理
-						</span>
-						<span class="arrow ">
-						</span>
-					</a>
-					<ul class="sub-menu">
-                        <li id="seal_apply">
-							<a href="/seal_apply/">
-								<i class="fa"></i>
-								印章申请
-							</a>
-						</li>
-                        <li id="seal_approve">
-							<a href="/seal_approve/">
-								<i class="fa"></i>
-								印章审批
-							</a>
-						</li>
-                        <li id="seal_all">
-							<a href="/seal_all/">
-								<i class="fa"></i>
-								全部印章
-							</a>
-						</li>
 					</ul>
 				</li>
                 {% if request.session.personal_information_can_view %}

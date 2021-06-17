@@ -8,12 +8,11 @@ import json
 
 @login_required
 def chpasswd(request):
-    path = request.path.split('/')[1]
-    return render(request, 'user/chpasswd.html',{'user':'%s%s' % (request.user.last_name,request.user.first_name),
-                                                        'path1':'user_manage',
-                                                        'path2':path,
-                                                        'page_name1':u'用户管理',
-                                                        'page_name2':u'修改密码',})
+    return render(request, 'user/chpasswd.html',{'user': request.user.username,
+                                                 'path1': 'user_manage',
+                                                 'path2': 'chpasswd',
+                                                 'page_name1': '用户管理',
+                                                 'page_name2': '修改密码',})
 
 @login_required
 def post_chpasswd(request):
