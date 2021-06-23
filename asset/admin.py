@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import table
 from django.http import HttpResponse
 from openpyxl import Workbook
-from django.contrib.admin.models import LogEntry
+from django.contrib.admin.models import LogEntry, ContentType
 
 
 class ExportExcelMixin(object):
@@ -47,8 +47,11 @@ class tableAdmin(admin.ModelAdmin, ExportExcelMixin):
 
 @admin.register(LogEntry)
 class LogEntryAdmin(admin.ModelAdmin):
-    list_display = ['action_time', 'object_repr', 'object_id', 'content_type_id', 'action_flag', 'user','change_message']
+    list_display = ['action_time', 'object_repr', 'content_type_id', 'action_flag', 'user','change_message']
 
     date_hierarchy = 'action_time'
 
     list_per_page = 15
+
+    def content_type_id(self, obj):
+        return obj.content_type.app_label + ' | ' + obj.content_type.model
