@@ -31,3 +31,5 @@ class table(models.Model):
     cost_center = models.CharField(verbose_name='成本中心', max_length=16, blank=True, null=True)
     checker = models.CharField(verbose_name='使用人', max_length=16, blank=True, null=True)
     create_time = models.DateTimeField(verbose_name='最后更新时间', auto_now_add=True)
+    location = models.CharField(verbose_name='位置', max_length=32, blank=True, null=True)
+    comment = models.CharField(verbose_name='备注', max_length=512, blank=True, null=True)
