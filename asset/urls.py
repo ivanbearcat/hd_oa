@@ -21,4 +21,5 @@ from asset.views import *
 urlpatterns = [
     url(r'^table/$', table),
     url(r'^table_data/$', table_data),
+    url(r'^table_approve/$', table_approve),
 ]

@@ -36,3 +36,14 @@ def table_data(request):
             'create_time': str(i.create_time).split('+')[0],
         })
     return HttpResponse(json.dumps({'code': -1, 'tableData': tableData}), content_type="application/json")
+
+
+
+@login_required
+def table_approve(request):
+    # data = json.loads(request.body)
+    # print(data.get('id'))
+    id = request.GET.get('id')
+    print(id)
+
+    return HttpResponse(json.dumps({'code': -1, 'tableData': 1}), content_type="application/json")
